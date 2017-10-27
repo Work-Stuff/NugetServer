@@ -158,10 +158,11 @@ publish/
 # in these scripts will be unencrypted
 PublishScripts/
 
-# NuGet Packages
-*.nupkg
-# The packages folder can be ignored because of Package Restore
+# Dont Ignore NuGet Packages so the server can access them
+!*.nupkg
+#  Dont ignore the packages folder because it holds the server packages
 **/packages/*
+!NugetServer/Packages/*
 # except build/, which is used as an MSBuild target.
 !**/packages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
